@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shri Holebasaveswar Traders Chimmad</title>
+
+<!-- GOOGLE FONT -->
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* GLOBAL */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5fff3;
+overflow-x:hidden;
+}
+
+/* HERO SECTION */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+position:relative;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:radial-gradient(circle at center,
+rgba(76,175,80,0.2),
+transparent 70%);
+animation:pulse 5s infinite;
+}
+
+@keyframes pulse{
+0%{
+transform:scale(1);
+opacity:0.5;
+}
+50%{
+transform:scale(1.2);
+opacity:0.8;
+}
+100%{
+transform:scale(1);
+opacity:0.5;
+}
+}
+
+.hero-content{
+position:relative;
+z-index:10;
+color:white;
+animation:fadeIn 2s ease;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+text-shadow:2px 2px 15px black;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:35px;
+max-width:900px;
+line-height:1.8;
+}
+
+/* MAIN BUTTONS */
+
+.button-group{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.main-btn{
+padding:18px 40px;
+border:none;
+border-radius:50px;
+font-size:20px;
+font-weight:bold;
+cursor:pointer;
+transition:0.4s;
+color:white;
+text-decoration:none;
+box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+.main-btn:hover{
+transform:scale(1.1);
+}
+
+.fertilizer-btn{
+background:linear-gradient(135deg,#43a047,#81c784);
+}
+
+.complex-btn{
+background:linear-gradient(135deg,#fb8c00,#ffcc80);
+}
+
+.pesticide-btn{
+background:linear-gradient(135deg,#e53935,#ef9a9a);
+}
+
+/* NAVBAR */
+
+nav{
+background:#1b5e20;
+padding:15px;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav ul{
+display:flex;
+justify-content:center;
+list-style:none;
+flex-wrap:wrap;
+}
+
+nav ul li{
+margin:10px 20px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:600;
+font-size:17px;
+}
+
+/* SECTIONS */
+
+.section{
+padding:70px 10%;
+}
+
+.section-title{
+text-align:center;
+font-size:42px;
+color:#1b5e20;
+margin-bottom:50px;
+}
+
+/* CARDS */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card h3{
+font-size:28px;
+margin-bottom:15px;
+color:#2e7d32;
+}
+
+.card p{
+font-size:15px;
+line-height:1.8;
+margin-bottom:15px;
+}
+
+.know-btn{
+padding:12px 28px;
+border:none;
+border-radius:30px;
+background:#2e7d32;
+color:white;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+.know-btn:hover{
+background:#1b5e20;
+transform:scale(1.05);
+}
+
+/* HAPPY FARMER SECTION */
+
+.farmer-section{
+padding:100px 20px;
+background:
+linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url('https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=1600&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+text-align:center;
+color:white;
+}
+
+.farmer-section h2{
+font-size:45px;
+margin-bottom:25px;
+}
+
+.farmer-section p{
+font-size:22px;
+max-width:1000px;
+margin:auto;
+line-height:1.9;
+}
+
+/* CONTACT */
+
+.contact{
+background:#1b5e20;
+color:white;
+text-align:center;
+padding:70px 20px;
+}
+
+.contact h2{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.contact p{
+font-size:20px;
+margin:10px 0;
+}
+
+/* FOOTER */
+
+footer{
+background:#103d13;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:34px;
+}
+
+.hero p{
+font-size:17px;
+}
+
+.section-title{
+font-size:30px;
+}
+
+.main-btn{
+font-size:16px;
+padding:14px 25px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>🌱 Shri Holebasaveswar Traders 🌱</h1>
+
+<p>
+Premium Fertilizers, NPK Complexes and Pesticides
+for Healthy Crops and Happy Farmers
+</p>
+
+<div class="button-group">
+
+<a href="#fertilizers" class="main-btn fertilizer-btn">
+🌾 Fertilizers
+</a>
+
+<a href="#complexes" class="main-btn complex-btn">
+🧪 Complexes
+</a>
+
+<a href="#pesticides" class="main-btn pesticide-btn">
+🛡️ Pesticides
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<ul>
+
+<li><a href="#">Home</a></li>
+<li><a href="#fertilizers">Fertilizers</a></li>
+<li><a href="#complexes">Complexes</a></li>
+<li><a href="#pesticides">Pesticides</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<!-- FERTILIZERS -->
+
+<section class="section" id="fertilizers">
+
+<h2 class="section-title">🌾 Fertilizers</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>Urea Fertilizer</h3>
+
+<p>
+Contains 46% Nitrogen which improves green leaves,
+fast growth and crop productivity.
+</p>
+
+<button class="know-btn"
+onclick="showInfo('Urea is mainly used for Sugarcane, Paddy and Wheat crops.')">
+
+Know More
+
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>DAP Fertilizer</h3>
+
+<p>
+Improves root growth, flowering and seed formation.
+</p>
+
+<button class="know-btn"
+onclick="showInfo('DAP contains Nitrogen and Phosphorus and is best for Cotton and Groundnut.')">
+
+Know More
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- COMPLEXES -->
+
+<section class="section" id="complexes">
+
+<h2 class="section-title">🧪 NPK Complexes</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1492496913980-501348b61469?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>NPK 19:19:19</h3>
+
+<p>
+Balanced nutrients for overall crop development and healthy flowering.
+</p>
+
+<button class="know-btn"
+onclick="showInfo('NPK 19:19:19 improves flowering, fruit quality and crop strength.')">
+
+Know More
+
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>10:26:26 Complex</h3>
+
+<p>
+Supports strong roots and better crop production.
+</p>
+
+<button class="know-btn"
+onclick="showInfo('10:26:26 is widely used for vegetables and pulse crops.')">
+
+Know More
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PESTICIDES -->
+
+<section class="section" id="pesticides">
+
+<h2 class="section-title">🛡️ Pesticides</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>Insecticides</h3>
+
+<p>
+Protects crops from harmful insects and pests.
+</p>
+
+<button class="know-btn"
+onclick="showInfo('Insecticides prevent crop damage and improve agricultural yield.')">
+
+Know More
+
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>Fungicides</h3>
+
+<p>
+Protects crops from fungal diseases and improves crop quality.
+</p>
+
+<button class="know-btn"
+onclick="showInfo('Fungicides help crops remain healthy and disease free.')">
+
+Know More
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- HAPPY FARMERS -->
+
+<section class="farmer-section">
+
+<h2>👨‍🌾 Happy Farmers Use Our Products</h2>
+
+<p>
+farmers trust Shri Holebasaveswar Traders
+for quality fertilizers, complexes and pesticides that
+help produce healthy and high-yield crops.
+</p>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<h2>📞 Contact Us</h2>
+
+<p>📍 Chimmad, Karnataka</p>
+
+<p>📱 +91 9739552011</p>
+
+<p>📱 +91 6360727599</p>
+
+<p>📧 arunmugalkhod@gmail.com</p>
+
+</section>
+
+<footer>
+
+<p>
+ Shri Holebasaveswar Traders | All Rights Reserved
+</p>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function showInfo(message){
+
+alert(message);
+
+}
+
+</script>
+
+</body>
+</html>
